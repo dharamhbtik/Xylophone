@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xylophone.MainPage" BackgroundColor="LightSteelBlue">
+
+    <StackLayout HorizontalOptions="FillAndExpand" Padding="5">
+        <Frame Padding="10" BackgroundColor="{Binding CColor}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="CenterAndExpand" Text="C  (1)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="C" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="5,0,5,0" BackgroundColor="{Binding DColor}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label Text="D  (2)" FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="D" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="10,0,10,0" BackgroundColor="{Binding EColor}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand" Text="E  (3)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="E" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="15,0,15,0" BackgroundColor="{Binding FColor}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label  FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand"  Text="F  (4)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="F" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="20,0,20,0" BackgroundColor="{Binding GColor}"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label  FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand"  Text="G  (3)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="G" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="25,0,25,0" BackgroundColor="{Binding AColor}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label  FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand"  Text="A  (2)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="A" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame Padding="10" Margin="30,0,30,0" BackgroundColor="{Binding BColor}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20">
+            <Label  FontSize="40" FontAttributes="Bold" TextColor="White" VerticalOptions="CenterAndExpand"  Text="B  (1)" HorizontalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" CommandParameter="B" Command="{Binding OnKeyPress}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <StackLayout.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Left" Command="{Binding OnSwipe}" CommandParameter="L"/>
+            <SwipeGestureRecognizer Direction="Right" Command="{Binding OnSwipe}" CommandParameter="R"/>
+        </StackLayout.GestureRecognizers>
+    </StackLayout>
+
+</ContentPage>
